@@ -1,9 +1,10 @@
 import React from 'react';
+import AddService from '../AddService/AddService';
 
 const Admin = () => {
     return (
         <div>
-            hi
+           <AddService></AddService>
         </div>
     );
 };

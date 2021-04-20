@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card,Button } from 'react-bootstrap';
-const Review = () => {
+const Review = ({r}) => {
     return (
         <section  style={{marginTop:"5%"}}>
         <h3 style={{color:"mediumorchid",textAlign:"center",fontFamily:"cursive"}}>Inspiring Reviews</h3>
@@ -11,12 +11,10 @@ const Review = () => {
             <Card.Body>
                 <blockquote className="blockquote mb-0">
                 <p>
-                    {' '}
-                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                    erat a ante"{' '}
+                    {r.review}
                 </p>
                 <footer className="blockquote-footer">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                {r.name}
                 </footer>
                 </blockquote>
             </Card.Body>

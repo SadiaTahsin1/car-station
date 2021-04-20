@@ -16,7 +16,7 @@ const AddService = () => {
       price:data.price,
       imageURL: imageURL
     };
-    const url = `https://flower-shop-server1.herokuapp.com/addService`;
+    const url = `https://cryptic-castle-29216.herokuapp.com/addService`;
     
     fetch(url, {
       method: 'POST', 
@@ -48,16 +48,8 @@ const AddService = () => {
         <div style={{display:"grid",gridTemplateColumns:"30% 60%",gridTemplateRows:"100%",marginLeft:"5%"}}>
         <Sidebar />
         <div style={{padding:"5%",float:"left"}}>
-        <h2>Add Product</h2>
-        {/* <form onSubmit={handleSubmit(onSubmit)} style={{padding:"5%",margin:"2%"}}>
-        
-        <input name="name" placeholder="Product Name" ref={register} />
-        <input name="weight" placeholder="weight" ref={register}/><br></br>
-        <input name="price" placeholder="price" ref={register}/>
-        <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-        <br></br>
-        <input type="submit" />
-        </form> */}
+        <h2>Add Service</h2>
+       
          <form onSubmit={handleSubmit(onSubmit)}>
       <label>Service Name</label>
       <input {...register("name")} /><br></br>

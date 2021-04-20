@@ -1,28 +1,32 @@
 import React from 'react';
 import {Card,Button } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-import orchid from '../../image/flower-pot-with-flowers.jpg';
+import './Services.css';
 const Services = ({s}) => {
     
     const history=useHistory();
-    const handleSelection=()=>{
-        history.push('/book');
+    const handleSelection=(_id)=>{
+        history.push(`/book/${_id}`);
        
       }
     return (
-        <div className="row" style={{margin:"2%"}}>
-            <div className="col-md-3" style={{padding:"10px"}}>
+        <div className="col-md-3" style={{padding:"10px"}}>
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={s.imageURL} style={{ height:"200px" }}/>
+            <Card.Img variant="top" src={s.imageURL} className="image" style={{ height:"60px",width:"60px", margin:"5% 35%"}}/>
+            <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
             <Card.Body>
                 <Card.Title>{s.name}</Card.Title>
                 <Card.Text>
                 ${s.price}
                 </Card.Text>
-                <Button variant="primary" onClick={()=>handleSelection()}>Buy Now</Button>
+                <Button variant="primary" onClick={()=>handleSelection(s._id)}>Book Now</Button>
+                
             </Card.Body>
             </Card>
-        </div></div>
+            </div>
+       
     );
 };
 
