@@ -13,9 +13,8 @@ const Services = ({s}) => {
         <div className="col-md-3" style={{padding:"10px"}}>
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={s.imageURL} className="image" style={{ height:"60px",width:"60px", margin:"5% 35%"}}/>
-            <div class="overlay">
-    <div class="text">Hello World</div>
-  </div>
+            
+  
             <Card.Body>
                 <Card.Title>{s.name}</Card.Title>
                 <Card.Text>
