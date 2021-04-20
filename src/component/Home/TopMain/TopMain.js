@@ -5,7 +5,7 @@ const TopMain = () => {
     return (
        <section>
            <div style={{width:"40%",float:"left",padding:"5%",margin:"0% 5%"}}>
-           <img src={pic} alt="" />
+           
            </div>
            <div style={{width:"40%",float:"left",padding:"5%",margin:"0% 5%"}}>
                <h3>Make your surrounding colorful</h3><br></br>
