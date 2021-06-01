@@ -1,17 +1,17 @@
 import React from 'react';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+//import CheckoutForm from './CheckOutForm';
+import SplitCardForm from './SplitCardForm';
 
-import SimpleCardForm from './SimpleCardForm';
-
-const Payment = ({handlePayment}) => {
+const Payment = () => {
     
 const stripePromise = loadStripe('pk_test_51IeGwFJyvC3yWksiIV7cFi4coXAiD1wfLyiHYcfEvBisXceTnPJqho28LC8tOm3i8x50VTndf0sTpoLqzMZkF09300TvTg0LH3');
 
     return (
      
         <Elements stripe={stripePromise}>
-         <SimpleCardForm handlePayment={handlePayment}></SimpleCardForm>
+         <SplitCardForm></SplitCardForm>
         </Elements>
      
     );

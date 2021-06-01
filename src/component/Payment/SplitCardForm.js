@@ -111,7 +111,7 @@ const SplitCardForm = () => {
           }}
         />
       </label><br></br>
-      <button type="submit" disabled={!stripe}>
+      <button type="submit" disabled={!stripe} onClick={()=>alert('Payment done,Thank you.')}>
         Pay
       </button>
     </form>

@@ -6,79 +6,35 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './component/Home/Home';
-import Login from './component/Login/Login';
-import PrivateRoute from './component/PrivateRoute/PrivateRoute';
-import Admin from './component/Admin/Admin';
-import Dashboard from './component/Dashboard/Dashboard';
-import Book from './component/Book/Book';
-import Bookinglist from './component/Bookinglist/Bookinglist';
-import AddService from './component/AddService/AddService';
-import AddAdmin from './component/AddAmin/AddAdmin';
-import ManageService from './component/Manage/ManageService';
-import AddReview from './component/Review/AddReview';
+
+import Home from './Component/Home/Home';
+import Login from './Component/Login/Login';
+import Checkout from './Component/Checkout/Checkout';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
-const [loggedInUser, setLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      {/* <p>Name: {loggedInUser.name}</p> */}
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}> 
     <Router>
     
      <Switch>
       <Route exact path="/">
-       <Home />
+      <Home></Home>
       </Route>
-      <PrivateRoute path="/admin">
-        <Admin />
-      </PrivateRoute>
-      <PrivateRoute path="/dashboard">
-        <Dashboard />
-      </PrivateRoute>
-      <PrivateRoute path="/book/:_id">
-        <Book />
-      </PrivateRoute>
-      <PrivateRoute path="/book">
-        <Book />
-      </PrivateRoute>
-    
-      <PrivateRoute path="/bookingList">
-       <Bookinglist />
-       </PrivateRoute>
-
-       <PrivateRoute path="/addService">
-        <AddService />
-      </PrivateRoute>
       
-      <PrivateRoute path="/addAdmin">
-        <AddAdmin />
-      </PrivateRoute>
-
-      <PrivateRoute path="/addReview">
-        <AddReview />
-      </PrivateRoute>
-
-      <PrivateRoute path="/manage">
-        <ManageService />
-      </PrivateRoute>
-
-      {/* <PrivateRoute path="/checkout/:_id">
-        <Checkout />
-      </PrivateRoute>
-      <PrivateRoute path="/orders">
-        <Orders />
-      </PrivateRoute>
-      <PrivateRoute path="/manageProduct">
-        <ManageProduct />
-      </PrivateRoute> */}
       <Route path="/login">
        <Login></Login>
       </Route>
+
+      <PrivateRoute path="/checkout">
+            <Checkout />
+          </PrivateRoute>
      </Switch>
  
  </Router>
- </UserContext.Provider>
+</UserContext.Provider>
   );
 }
 
