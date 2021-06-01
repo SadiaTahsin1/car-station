@@ -1,0 +1,24 @@
+.car-box{
+    text-align: left;
+    
+}
+.card-img-top{
+    height:175px;
+}
+.card-box-inner{
+    
+    margin: 10px;
+}
+.card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.carbox-section{
+    background:#ececec;
+    padding: 40px 0px;
+}
+.info-text{
+    text-align:center;
+}
